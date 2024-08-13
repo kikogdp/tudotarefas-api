@@ -1,4 +1,4 @@
-package com.lucasangelo.todosimple.models;
+package com.kikopacote.todosimple.models;
 
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public class Tarefa {
     }
 
     
-
     public Tarefa(Long id, Usuario usuario, String descricao) {
         this.id = id;
         this.usuario = usuario;
