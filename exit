@@ -1,0 +1,23 @@
+[33mcommit 2d18340418b867c35c1ef90af90bdf0f36245a61[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: kiko <kikogdp@hotmail.com>
+Date:   Mon Aug 12 19:58:54 2024 -0300
+
+    criação dos models usuário e tarefa
+
+[33mcommit 084444efbeb5a1528ef526c4223bdef21fb8debc[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: kiko <kikogdp@hotmail.com>
+Date:   Sat Aug 10 09:55:35 2024 -0300
+
+    Criação do usuário no pacote modelo
+
+[33mcommit 7a1d3c0911c01b144e570267eb5d302ccec7d80b[m
+Author: kiko <kikogdp@hotmail.com>
+Date:   Sat Aug 10 07:43:48 2024 -0300
+
+    Configuração do banco de dados
+
+[33mcommit 4f2fe03577f5b382f48895d3599bad8e10ee5abf[m
+Author: kiko <kikogdp@hotmail.com>
+Date:   Thu Aug 8 22:00:53 2024 -0300
+
+    Projeto Spring Boot
