@@ -17,15 +17,23 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
-import lombok.Getter;
-import lombok.Setter;
+
 import java.util.Objects;
 
 @Entity
 @Table (name ="usuario")
 public class Usuario {
-    public interface CriacaoDeUsuario{}
-    public interface AtualizacaoDeSenha{}
+    public interface CriacaoDeUsuario{
+
+    }
+    public interface AtualizacaoDeSenha{
+
+    }
+    public interface AtualizarUsuario {
+    
+        
+    }
+
     
 
 
@@ -39,22 +47,18 @@ public class Usuario {
     @Column(name = "nome_usuario", length = 100, nullable = false, unique = true)
     @NotNull(groups = CriacaoDeUsuario.class)
     @NotEmpty(groups = CriacaoDeUsuario.class)
-    @Size(groups =CriacaoDeUsuario.class, min = 2, max = 100)
-    @Setter
-    @Getter
+    @Size(groups =CriacaoDeUsuario.class, min = 2, max = 100)   
     private String nome;
 
     
     @JsonProperty(access = Access.WRITE_ONLY)
     @Column(name = "senha_usuario", length = 60, nullable = false)
-    @NotNull(groups ={CriacaoDeUsuario.class, AtualizacaoDeSenha.class} )
-    @NotEmpty(groups = CriacaoDeUsuario.class)
-    @Size(groups = CriacaoDeUsuario.class, min = 8, max = 60)
-    @Setter
-    @Getter
+    @NotNull(groups ={CriacaoDeUsuario.class, AtualizarUsuario.class} )
+    @NotEmpty(groups ={CriacaoDeUsuario.class, AtualizarUsuario.class})
+    @Size(groups = {CriacaoDeUsuario.class, AtualizarUsuario.class}, min = 8, max = 60)    
     private String senha;
 
-    @OneToMany(mappedBy = "usuario")
+    @OneToMany(mappedBy ="usuario")
     private List<Tarefa> tarefas = new ArrayList<Tarefa>();
 
   
