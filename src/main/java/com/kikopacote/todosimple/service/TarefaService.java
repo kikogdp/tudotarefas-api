@@ -1,15 +1,17 @@
 package com.kikopacote.todosimple.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.kikopacote.todosimple.models.Tarefa;
 import com.kikopacote.todosimple.models.Usuario;
 import com.kikopacote.todosimple.repositories.TarefaRepository;
-import com.kikopacote.todosimple.repositories.UsuarioRepository;
 
+@Service
 public class TarefaService {
 
      
@@ -17,6 +19,7 @@ public class TarefaService {
    @Autowired
    private TarefaRepository tarefaRepository;
 
+   @Autowired
    private UsuarioService usuarioService;
 
  
@@ -26,6 +29,14 @@ public class TarefaService {
         )); 
 
         }
+
+    public List<Tarefa> findByUsuarioId(Long id){
+        List<Tarefa> tarefas = this.tarefaRepository.findByUsuario_id(id);
+        return tarefas;
+
+    }
+
+  
 
     @Transactional  
     public Tarefa criarTarefa(Tarefa tarefa){

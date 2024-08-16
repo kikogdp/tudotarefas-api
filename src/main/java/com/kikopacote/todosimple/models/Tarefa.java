@@ -22,7 +22,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Tarefa {
-    public static final String TABLE_NAME= "task";
+    public static final String TABLE_NAME= "tarefa";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
