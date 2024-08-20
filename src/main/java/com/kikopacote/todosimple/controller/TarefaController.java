@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.kikopacote.todosimple.models.Tarefa;
-import com.kikopacote.todosimple.models.Usuario.CriacaoDeUsuario;
 import com.kikopacote.todosimple.service.TarefaService;
 
 @RestController
